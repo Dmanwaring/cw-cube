@@ -44,6 +44,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
      }
 });
 
+bot.on('ready', () => {
+  bot.user.setGame('Under Construction')
+})
+
 var http = require("http");
 setInterval(function() {
     http.get("http://cw-cube.herokuapp.com");
