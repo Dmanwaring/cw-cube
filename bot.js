@@ -33,9 +33,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: "Pong!"
                 });
             break;
-                 case "info" :
-    message.channel.send("I am CUBE, a Celestial AI created by Sam'anar. My purpose is to provide knowledge about the Galaxy to you, its mortal inhabitants.");
-    break;
+            case "info":
+                bot.sendMessage({
+                    to: channelID,
+                    message: "My name is CUBE, an AI created by Sam'anar to provide you mortals with information about the Galaxy."
+                });
+            break;     
 }
             // Just add any case commands if you want to..
          }
