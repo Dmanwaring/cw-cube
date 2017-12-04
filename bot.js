@@ -48,3 +48,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 setInterval(() => {
   http.get('http://cw-cube.herokuapp.com');
 }, 900000);
+
+// Execute the update function now and every update_interval milliseconds
+		(function update(){
+			// Update all active events' summaries
+			db.events.getAllActive().then(
+				events => {
+					for (var i = 0; i < events.length; i++) {
+						summaryHandler.updateSummary(events[i]).catch(console.error);
+					}
+				}
+			).catch(console.error);
+
+			setTimeout(update, cfg.update_interval);
+		})();
+
+		console.log("Running!");
+	});
+
+}).catch(console.error);
