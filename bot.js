@@ -44,11 +44,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
      }
 });
 
- // pings server every 15 minutes to prevent dynos from sleeping
-setInterval(() => {
-  http.get('http://cw-cube.herokuapp.com');
-}, 900000);
-
 // Execute the update function now and every update_interval milliseconds
 		(function update(){
 			// Update all active events' summaries
@@ -65,8 +60,6 @@ setInterval(() => {
 
 		console.log("Running!");
 	});
-
-}).catch(console.error);
 
 var http = require("http");
 setInterval(function() {
