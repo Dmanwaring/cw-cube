@@ -39,7 +39,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: "My name is CUBE, an AI created by Sam'anar to provide you mortals with information about the Galaxy."
                 });
             break;     
-}
             // Just add any case commands if you want to..
          }
      }
