@@ -4,8 +4,6 @@
   "description": "A Codex designed by Sam'anar to store vital information on the Galaxy and realms.",
   "main": "bot.js",
   "author": "Dan#2941",
-  "engines": {
-  "node": "8.9.1"}
   "dependencies": {
     "discord.io": "^2.5.3",
     "winston": "^2.4.0"
