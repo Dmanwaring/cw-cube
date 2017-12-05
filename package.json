@@ -9,6 +9,6 @@
     "winston": "^2.4.0"
   },
    "scripts": {
- -    "start": "node bot.js"
- -  }
+  "start": "node bot.js"
+ }
 }
